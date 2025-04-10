@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>🌦️ Weather Dashboard</h1>
+
+      <!-- Basic form with an input and a button that let's the user search -->
+      <form>
+        <input type="text" id="city-input" placeholder="Example: Cincinnati, OH" required/>
+        <button type="submit">Get Weather</button>
+      </form>
+
+      <!-- Weather is an empty container that will fill wtih the weather data using JS and DOM-->
+      <section id="weather-result"></section>
+    </main>
+
+    <!-- Tells the browser to treat the javascript as a module letting us import and export between files later-->
+    <script type="module" src="Scripts/main.js"></script>
+  </body>
+</html>
