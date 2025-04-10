@@ -1,26 +1,51 @@
+<!-- Declares the document type so the browser knows to use HTML5 -->
 <!DOCTYPE html>
+
+<!-- Starts the root element of the HTML page and declares the language as English -->
 <html lang="en">
   <head>
+    <!-- Declares character encoding (UTF-8 supports all languages, emojis, etc.) -->
     <meta charset="UTF-8" />
+
+    <!-- Makes the page responsive: ensures proper scaling on phones/tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Sets the title shown in the browser tab -->
     <title>Weather Dashboard</title>
+
+    <!-- Links the external CSS file for styling the page -->
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
+
   <body>
+    <!-- <main> is a semantic tag that holds the main content of the page -->
     <main>
+      <!-- Heading for the app, includes a weather emoji for visual flair -->
       <h1>🌦️ Weather Dashboard</h1>
 
-      <!-- Basic form with an input and a button that let's the user search -->
+      <!-- A form element that lets the user submit a city/state to get weather info -->
       <form>
-        <input type="text" id="city-input" placeholder="Example: Cincinnati, OH" required/>
+        <!-- Text input where the user types their city and state (e.g., Cincinnati, OH) -->
+        <!-- The 'required' attribute ensures the user can’t submit an empty form -->
+        <input
+          type="text"
+          id="city-input"
+          placeholder="Example: Cincinnati, OH"
+          required
+        />
+
+        <!-- Submit button labeled "Get Weather" -->
+        <!-- When clicked, it triggers the JavaScript to fetch weather data -->
         <button type="submit">Get Weather</button>
       </form>
 
-      <!-- Weather is an empty container that will fill wtih the weather data using JS and DOM-->
+      <!-- Empty section that will be filled with weather data using JavaScript -->
+      <!-- JavaScript will dynamically add weather cards here based on user input -->
       <section id="weather-result"></section>
     </main>
 
-    <!-- Tells the browser to treat the javascript as a module letting us import and export between files later-->
+    <!-- Loads the main JavaScript file -->
+    <!-- 'type="module"' allows use of import/export between multiple JS files -->
     <script type="module" src="Scripts/main.js"></script>
   </body>
 </html>
